@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-2">
+            <div className="flex md:hidden items-center space-x-2">
               <button
                 onClick={toggleDarkMode}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
@@ -113,7 +113,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 dark:border-gray-700 py-4">
+            <div className="md:hidden border-t border-gray-200 dark:border-gray-700 py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md">
               {user ? (
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800">
@@ -134,13 +134,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
                 <div className="space-y-3">
                   <button
                     onClick={() => handleAuthClick('login')}
-                    className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300"
+                    className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg"
                   >
                     Login
                   </button>
                   <button
                     onClick={() => handleAuthClick('signup')}
-                    className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300"
+                    className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                   >
                     Sign Up
                   </button>
