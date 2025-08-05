@@ -28,7 +28,7 @@ function AppContent() {
     switch (activeView) {
       case 'cgpa':
         return (
-          <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+          <section className="py-20 bg-gradient-to-br from-blue-50/30 to-indigo-50/30 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-all duration-300">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-8">
                 <button
@@ -44,7 +44,7 @@ function AppContent() {
         );
       case 'notes':
         return (
-          <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+          <section className="py-20 bg-gradient-to-br from-green-50/30 to-emerald-50/30 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-8">
                 <button
@@ -61,7 +61,7 @@ function AppContent() {
       case 'creators':
         return (
           <>
-            <div className="pt-20 pb-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+            <div className="pt-20 pb-8 bg-gradient-to-br from-blue-50/30 to-indigo-50/30 dark:from-gray-900 dark:to-gray-800 transition-all duration-300">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <button
                   onClick={() => setActiveView('home')}
@@ -86,7 +86,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-all duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/20 to-indigo-50/20 dark:from-gray-900 dark:to-gray-800 transition-all duration-300">
       <div onClick={handleLogoClick}>
         <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} />
       </div>
