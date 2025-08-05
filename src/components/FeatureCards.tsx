@@ -10,7 +10,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ onFeatureClick }) => {
   const { user } = useAuth();
 
   const handleFeatureClick = (feature: 'cgpa' | 'notes' | 'creators') => {
-    if ((feature === 'cgpa' || feature === 'notes') && !user) {
+    if ((feature === 'notes' || feature === 'creators') && !user) {
       alert('Please log in to access this feature.');
       return;
     }
@@ -36,7 +36,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ onFeatureClick }) => {
               onClick={() => handleFeatureClick('cgpa')}
               className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
             >
-              {user ? 'Open Tool' : 'Login to Access'}
+              Open Tool
             </button>
           </div>
 
@@ -74,7 +74,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ onFeatureClick }) => {
               onClick={() => handleFeatureClick('creators')}
               className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
             >
-              Meet the Team
+              {user ? 'Meet the Team' : 'Login to Meet Team'}
             </button>
           </div>
         </div>
